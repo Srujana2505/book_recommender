@@ -10,8 +10,8 @@ pt = pickle.load(open('pt.pkl', 'rb'))
 books = pickle.load(open('books.pkl', 'rb'))
 similarity_scores = pickle.load(open('similarity_scores.pkl', 'rb'))
 
-user_input = st.text_input('Enter the name of the book: ')
-print(type(user_input))
+#user_input = st.text_input('Enter the name of the book: ')
+user_input = st.selectbox('Search your favourite book', list(popular_df['Book-Title'].values))
 
 def display_images(data):
 	images = list(data['Image-URL-M'].values)
